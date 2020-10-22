@@ -17,7 +17,7 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
     device/potato/sepolicy/qcom/dynamic \
     device/potato/sepolicy/qcom/system
 else
-BOARD_SEPOLICY_DIRS += \
+BOARD_VENDOR_SEPOLICY_DIRS += \
     device/potato/sepolicy/qcom/dynamic \
     device/potato/sepolicy/qcom/vendor
 endif
