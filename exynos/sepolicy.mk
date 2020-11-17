@@ -20,4 +20,5 @@ else
 BOARD_SEPOLICY_DIRS += \
     device/descendant/sepolicy/exynos/dynamic \
     device/descendant/sepolicy/exynos/vendor
+
 endif
