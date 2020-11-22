@@ -1,6 +1,6 @@
 #
 # This policy configuration will be used by all products that
-# inherit from potato
+# inherit from descendant
 #
 
 ifeq ($(TARGET_COPY_OUT_VENDOR), vendor)
@@ -16,20 +16,20 @@ endif
 endif
 
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
-    device/potato/sepolicy/common/public
+    device/descendant/sepolicy/common/public
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/potato/sepolicy/common/private
+    device/descendant/sepolicy/common/private
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/potato/sepolicy/common/dynamic \
-    device/potato/sepolicy/common/system
+    device/descendant/sepolicy/common/dynamic \
+    device/descendant/sepolicy/common/system
 else
 BOARD_VENDOR_SEPOLICY_DIRS += \
-    device/potato/sepolicy/common/dynamic \
-    device/potato/sepolicy/common/vendor
+    device/descendant/sepolicy/common/dynamic \
+    device/descendant/sepolicy/common/vendor
 endif
 
 # Selectively include legacy rules defined by the products
--include device/potato/sepolicy/legacy-common/sepolicy.mk
+-include device/descendant/sepolicy/legacy-common/sepolicy.mk
